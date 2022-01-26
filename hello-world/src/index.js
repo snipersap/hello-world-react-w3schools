@@ -19,7 +19,24 @@ class Car{
   }
 
 } 
+
 //Create an object of the car
 const myCar = new Car("Ford");
 //Call present
 myCar.present();
+
+
+//Create a class inherited from Car
+class Model extends Car {
+  constructor(name, model) {
+    super(name);
+    this.model = model;
+  }
+
+  show() {
+    return this.present() + ',it is a ' + this.model;
+  }
+}
+
+const myCarModel = new Model("Ford","Mustang");
+myCarModel.show(); //I have a Ford, it is a Mustang
