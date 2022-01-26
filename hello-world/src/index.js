@@ -12,6 +12,14 @@ class Car{
   constructor(name){
     this.brand = name;
   }
+
+//Add the present method
+  present() {
+    return 'I have a ' + this.brand;
+  }
+
 } 
 //Create an object of the car
 const myCar = new Car("Ford");
+//Call present
+myCar.present();
