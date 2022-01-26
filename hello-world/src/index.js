@@ -22,8 +22,8 @@ class Car{
 
 //Create an object of the car
 const myCar = new Car("Ford");
-//Call present
-myCar.present();
+//Call present: I have a Ford
+document.getElementById("Car").innerHTML = myCar.present();
 
 
 //Create a class inherited from Car
@@ -39,4 +39,16 @@ class Model extends Car {
 }
 
 const myCarModel = new Model("Ford","Mustang");
-myCarModel.show(); //I have a Ford, it is a Mustang
+//I have a Ford, it is a Mustang
+document.getElementById("Model").innerHTML = myCarModel.show();
+
+//Arrow functions
+const hello = function() {
+  return 'Normal Function.';
+}
+document.getElementById("NormalFunction").innerHTML = hello();
+
+const helloWithArrow = () =>{
+  return 'Arrow Function';
+}
+document.getElementById("ArrowFunction").innerHTML = helloWithArrow();
