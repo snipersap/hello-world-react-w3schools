@@ -42,13 +42,29 @@ const myCarModel = new Model("Ford","Mustang");
 //I have a Ford, it is a Mustang
 document.getElementById("Model").innerHTML = myCarModel.show();
 
+
+
 //Arrow functions
+//Simple function
 const hello = function() {
   return 'Normal Function.';
 }
 document.getElementById("NormalFunction").innerHTML = hello();
 
+//Arrow function
 const helloWithArrow = () =>{
   return 'Arrow Function';
 }
 document.getElementById("ArrowFunction").innerHTML = helloWithArrow();
+
+//Arrow function shortened
+const helloArrowShort = () => "Shortened Arrow returing only 1 value";
+document.getElementById("ArrowFunctionShort").innerHTML = helloArrowShort();
+
+//Arrow function with parameter
+const helloWithParameter = (param) => "Arrow function with 1 " + param;
+document.getElementById("ArrowWithParameter").innerHTML = helloWithParameter("Parameter!");
+
+//Arrow function without paranthesis
+const helloWithoutParanthesis = param => "Arrow without " + param;
+document.getElementById("ArrowWithoutParanthesis").innerHTML = helloWithoutParanthesis("Paranthesis");
