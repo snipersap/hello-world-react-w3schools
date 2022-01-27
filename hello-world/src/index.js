@@ -106,3 +106,24 @@ var b = 2; //OK, with warning: 'b' is already defined
 const fruits = ['Array Map example','apple', 'banana','mango'];
 const mappedFruits = fruits.map((element) => {return <p>{element}</p>});
 ReactDOM.render(mappedFruits, document.getElementById("arrayMap"));
+
+
+//Destructuring arrays
+const vehicles = ['Mustang', 'Volvo','Mahindra'];
+const [car, bus, truck] = vehicles;
+const models = [car, bus , truck];
+ReactDOM.render(models, document.getElementById('destructuring'));
+
+//Handy desctructuring
+function calculate(a, b) {
+  const add = a + b;
+  const subtract = a - b;
+  const multiply = a * b;
+  const divide = a / b;
+
+  return [add, subtract, multiply, divide];
+}
+const [addition, subtraction, multiplication, division] = calculate(40, 20);
+//render it
+const maths = [addition,',', subtraction,',', multiplication,',', division];
+ReactDOM.render(maths, document.getElementById('maths'));
