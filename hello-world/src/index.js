@@ -93,3 +93,10 @@ document.getElementById("btn").addEventListener("click", mySiteHeader.changeColo
 window.addEventListener("load", mySiteHeader.arrowChangeColor); //[object Object] on site load
 document.getElementById("arrowBtn").addEventListener("click", mySiteHeader.arrowChangeColor);
 //[object Object][object Object] on button click
+
+
+//Difference: Const and var
+const x = 2;
+//const x = 1; Parsing error: Identifier 'x' has already been declared.
+var b = 1;
+var b = 2; //OK, with warning: 'b' is already defined
