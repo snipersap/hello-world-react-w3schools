@@ -100,3 +100,9 @@ const x = 2;
 //const x = 1; Parsing error: Identifier 'x' has already been declared.
 var b = 1;
 var b = 2; //OK, with warning: 'b' is already defined
+
+
+//Array.map( )
+const fruits = ['Array Map example','apple', 'banana','mango'];
+const mappedFruits = fruits.map((element) => {return <p>{element}</p>});
+ReactDOM.render(mappedFruits, document.getElementById("arrayMap"));
