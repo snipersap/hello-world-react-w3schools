@@ -68,3 +68,28 @@ document.getElementById("ArrowWithParameter").innerHTML = helloWithParameter("Pa
 //Arrow function without paranthesis
 const helloWithoutParanthesis = param => "Arrow without " + param;
 document.getElementById("ArrowWithoutParanthesis").innerHTML = helloWithoutParanthesis("Paranthesis");
+
+
+//this represents the object that defined the Arrow function
+//Here are two examples showing the difference
+//With Regular function
+class siteHeader{
+  constructor(){
+    this.color = 'red';
+  }
+  changeColor = function() {
+    document.getElementById("changeColor").innerHTML += this; 
+  }
+  arrowChangeColor = () =>{
+    document.getElementById("arrowChangeColor").innerHTML += this; 
+  }
+}
+const mySiteHeader = new siteHeader();
+window.addEventListener("load", mySiteHeader.changeColor); //[object Window] on site load
+document.getElementById("btn").addEventListener("click", mySiteHeader.changeColor);
+//[object Window][object HTMLButtonElement] on button click
+
+//Now with Arrow function
+window.addEventListener("load", mySiteHeader.arrowChangeColor); //[object Object] on site load
+document.getElementById("arrowBtn").addEventListener("click", mySiteHeader.arrowChangeColor);
+//[object Object][object Object] on button click
