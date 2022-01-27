@@ -126,4 +126,4 @@ function calculate(a, b) {
 const [addition, subtraction, multiplication, division] = calculate(40, 20);
 //render it
 const maths = [addition,',', subtraction,',', multiplication,',', division];
-ReactDOM.render(maths, document.getElementById('maths'));
+ReactDOM.render(maths, document.getElementById('maths')); 
