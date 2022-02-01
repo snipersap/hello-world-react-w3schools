@@ -124,8 +124,9 @@ function calculate(a, b) {
   return [add, subtract, multiply, divide];
 }
 const [addition, subtraction, multiplication, division] = calculate(40, 20);
+const [,,,div] = calculate(25,10); //extract only the fourth element
 //render it
-const maths = [addition,',', subtraction,',', multiplication,',', division];
+const maths = [addition,',', subtraction,',', multiplication,',', division, ',',div];
 ReactDOM.render(maths, document.getElementById('maths')); 
 
 //Destructuring Objects
@@ -149,3 +150,21 @@ function showMyNewVehicle({brand, color, type, year}) { //order of param element
   const message = 'New: My ' + brand + ' is a ' + type + ' in bright ' + color + ' manufactured in ' + year + '.';
   document.getElementById('showNewVehicle').innerHTML = message;
 }
+
+
+//Destructuring ojects with deep nesting
+const vehicleTwo = {
+  brand: 'BWM',
+  type: {
+    model: 'Mini',
+    extension: 'lxi'
+  },
+  color: 'deep green'
+}
+
+showMyDetailedVehicle(vehicleTwo);
+function showMyDetailedVehicle({brand, type: {extension, model}, color}) {
+  const message = 'Deep Nesting: I bought a ' + brand + ' ' + model + ' ' + extension + ' in ' + color +'.';
+  document.getElementById('showMyDetailedVehicle').innerHTML = message;
+}
+
