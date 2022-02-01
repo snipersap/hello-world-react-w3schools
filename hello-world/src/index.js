@@ -127,3 +127,25 @@ const [addition, subtraction, multiplication, division] = calculate(40, 20);
 //render it
 const maths = [addition,',', subtraction,',', multiplication,',', division];
 ReactDOM.render(maths, document.getElementById('maths')); 
+
+//Destructuring Objects
+//Old way
+const vehicleOne = {
+  brand: 'Ford',
+  type: 'Mustang',
+  color: 'red',
+  year: 2022
+}
+
+showMyVehicle(vehicleOne);
+function showMyVehicle(vehicle) {
+  const message = '<br/>Old: My ' + vehicle.brand + ' is a ' + vehicle.type + ' in bright ' + vehicle.color + ' manufactured in ' + vehicle.year + '.';
+  document.getElementById('showOldVehicle').innerHTML = message; 
+}
+
+//new way
+showMyNewVehicle(vehicleOne);
+function showMyNewVehicle({brand, color, type, year}) { //order of param elements is not important
+  const message = 'New: My ' + brand + ' is a ' + type + ' in bright ' + color + ' manufactured in ' + year + '.';
+  document.getElementById('showNewVehicle').innerHTML = message;
+}
