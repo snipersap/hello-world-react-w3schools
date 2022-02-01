@@ -162,9 +162,42 @@ const vehicleTwo = {
   color: 'deep green'
 }
 
-showMyDetailedVehicle(vehicleTwo);
+showMyDetailedVehicle(vehicleTwo); //normal functions can be used before they are defined
 function showMyDetailedVehicle({brand, type: {extension, model}, color}) {
   const message = 'Deep Nesting: I bought a ' + brand + ' ' + model + ' ' + extension + ' in ' + color +'.';
   document.getElementById('showMyDetailedVehicle').innerHTML = message;
 }
 
+
+
+//Spread operator
+//Copy 2 arrays to a thrid one
+const arrOne = ['ArrOne',1,2,3,4];
+const arrTwo = ['ArrTwo',5,6,7,8];
+const arrCombined = [...arrOne, ...arrTwo];
+ReactDOM.render(arrOne, document.getElementById('arrOneForSpreadOp'));
+ReactDOM.render(arrTwo, document.getElementById('arrTwoForSpreadOp'));
+ReactDOM.render(arrCombined, document.getElementById('combineArrayWithSpreadOp'));
+
+//in combo with desctructuring
+const [first, second, ...rest] = arrCombined;
+ReactDOM.render(first, document.getElementById('firstElementWithDestructuring'));
+ReactDOM.render(second, document.getElementById('secondElementWithDestructuring'));
+ReactDOM.render(rest, document.getElementById('restOfElements'));
+
+//in combo with objects
+const vehicleThree = {
+  brand: 'Ford',
+  color: 'yellow'
+}
+const vehicleFour = {
+  type: 'Mustang',
+  year: 2022,
+  color: 'deep blue'
+}
+const combinedVehicle = {...vehicleThree, ...vehicleFour };
+const showCombinedVehicle = ({brand,color,type, year}) => {
+  const message = 'This is a combined vehicle of ' + brand + ',' + type + ' in ' + color + ' and built in ' + year;
+  ReactDOM.render(message, document.getElementById('combinedVehicle'));
+}
+showCombinedVehicle(combinedVehicle);//arrow functions cannot be used before they are defined!!
