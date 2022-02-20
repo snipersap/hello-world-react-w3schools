@@ -1,0 +1,83 @@
+.containerNeumorphic {
+    background: #ecf0f3;
+    width: 350px;
+    height: 500px;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+
+.brandLogo{
+    height: 100px;
+    width: 100px;
+    background: url('https://img.icons8.com/color/100/000000/twitter--v2.png');
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 25%;
+    box-sizing: border-box;
+    box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+}
+
+input {
+    background: #ecf0f3;
+    height: 30px;
+    width: 200px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-top: 5px;
+    border-radius: 50px;
+    border-color: #cbced1;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+
+    /*values of input*/
+    font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #1da1f2;
+    padding-left: 10px;
+}
+
+::placeholder{
+    color: #777a7c;
+    font-size: 11px;
+}
+
+label{
+    font-family: serif;
+    color: #17698f;
+}
+
+input:focus{
+    outline: 2px solid #17698f;
+}
+
+button {
+    margin-top: 20px;
+    background: #1da1f2;
+    border-radius: 50px;
+    height: 30px;
+    width: 215px;
+    margin-left: 10px;
+    margin-top: 5px;
+    color: white;
+    box-shadow: 6px 6px 6px #cbced1,  -6px -6px 6px white;
+    border-color: #cbced1;
+/*hover*/
+    transition: 0.5s 0.5s;
+   /* or individually to modify only 1 property 
+   transition:background-color 0.5s 1s;*/
+    cursor: pointer; 
+}
+
+button:hover{
+    box-shadow: none;
+    background-color: #17698f;
+}
+
+.experiment {
+   /* background: #ecf5f5;*/
+   background: white;
+    padding: 20px;
+}
